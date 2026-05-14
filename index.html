@@ -6,9 +6,10 @@
     <title>Emma's Nailist | Luxury Nail Art</title>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
+        /* --- TEMA WARNA ESTETIK (PINK & UNGU SOFT) --- */
         :root { 
-            --main: #d4a373; 
-            --pink-bg: #fce4ec; /* Pink soft sesuai foto */
+            --main: #5e35b1; /* Ungu Elegan */
+            --pink-bg: #fce4ec; /* Pink Soft ala foto */
             --purple-light: #f3e5f5; 
             --text: #4a4a4a;
             --white: #ffffff;
@@ -17,15 +18,17 @@
         * { box-sizing: border-box; }
         body { font-family: 'Poppins', sans-serif; background: var(--pink-bg); margin: 0; color: var(--text); scroll-behavior: smooth; }
         
+        /* Navigasi Mewah */
         nav { 
-            background: rgba(255, 255, 255, 0.9); backdrop-filter: blur(10px); padding: 20px; 
+            background: rgba(255, 255, 255, 0.9); backdrop-filter: blur(10px); padding: 15px; 
             position: sticky; top: 0; display: flex; justify-content: center; gap: 25px; 
             box-shadow: 0 2px 15px rgba(0,0,0,0.05); z-index: 1000; 
         }
-        nav a { text-decoration: none; color: #5e35b1; font-weight: 600; font-size: 12px; letter-spacing: 1px; }
+        nav a { text-decoration: none; color: var(--main); font-weight: 600; font-size: 11px; letter-spacing: 2px; }
 
         .container { max-width: 800px; margin: auto; padding: 20px; }
         
+        /* Hero Section sesuai Desain Baru */
         .hero { 
             text-align: center; padding: 100px 20px; 
             background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('header.jpg'); 
@@ -34,20 +37,24 @@
             justify-content: center; color: white;
         }
         .hero h1 { font-family: 'Playfair Display', serif; font-size: 45px; margin: 0; }
+        .hero p { font-size: 16px; margin-top: 10px; opacity: 0.9; }
 
+        /* Card Style Melengkung Halus */
         .card { background: white; padding: 35px 25px; border-radius: 40px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); margin-bottom: 30px; }
         h3 { 
-            font-family: 'Playfair Display', serif; color: #5e35b1; 
+            font-family: 'Playfair Display', serif; color: var(--main); 
             font-size: 24px; border-bottom: 2px solid var(--purple-light); 
             display: inline-block; padding-bottom: 5px; margin-bottom: 25px; 
         }
 
+        /* Katalog Horizontal */
         .testi-grid { display: flex; overflow-x: auto; gap: 15px; padding-bottom: 20px; scroll-snap-type: x mandatory; }
         .testi-item { flex: 0 0 250px; aspect-ratio: 1/1; background: #eee; border-radius: 30px; overflow: hidden; scroll-snap-align: start; }
         .testi-item img { width: 100%; height: 100%; object-fit: cover; }
 
+        /* Form Minimalis */
         .form-group { margin-bottom: 15px; text-align: left; }
-        label { font-weight: 600; font-size: 13px; display: block; margin-bottom: 8px; color: #5e35b1; }
+        label { font-weight: 600; font-size: 12px; display: block; margin-bottom: 8px; color: var(--main); text-transform: uppercase; }
         input, select, textarea { 
             width: 100%; padding: 14px; border: 1px solid #f0f0f0; 
             border-radius: 15px; font-size: 14px; background: #fafafa;
@@ -57,11 +64,12 @@
         .check-item { background: #fef9ff; padding: 12px; border-radius: 12px; display: flex; align-items: center; gap: 10px; font-size: 13px; }
         
         button { 
-            width: 100%; padding: 18px; background: #5e35b1; color: white; 
+            width: 100%; padding: 18px; background: var(--main); color: white; 
             border: none; border-radius: 50px; font-weight: bold; font-size: 16px; 
-            cursor: pointer; transition: 0.3s; margin-top: 10px;
+            cursor: pointer; transition: 0.3s; margin-top: 10px; letter-spacing: 1px;
         }
-        button:hover { background: #4527a0; transform: scale(1.02); }
+        button:hover { background: #4527a0; transform: translateY(-2px); }
+        option:disabled { color: #cc0000; background-color: #fce4e4; }
     </style>
 </head>
 <body>
@@ -86,7 +94,16 @@
             <div class="testi-item"><img src="kuku2.jpg" alt="2"></div>
             <div class="testi-item"><img src="kuku3.jpg" alt="3"></div>
             <div class="testi-item"><img src="kuku4.jpg" alt="4"></div>
-            </div>
+            <div class="testi-item"><img src="kuku5.jpg" alt="5"></div>
+            <div class="testi-item"><img src="kuku6.jpg" alt="6"></div>
+            <div class="testi-item"><img src="kuku7.jpg" alt="7"></div>
+            <div class="testi-item"><img src="kuku8.jpg" alt="8"></div>
+            <div class="testi-item"><img src="kuku9.jpg" alt="9"></div>
+            <div class="testi-item"><img src="kuku10.jpg" alt="10"></div>
+            <div class="testi-item"><img src="kuku11.jpg" alt="11"></div>
+            <div class="testi-item"><img src="kuku12.jpg" alt="12"></div>
+            <div class="testi-item"><img src="kuku13.jpg" alt="13"></div>
+        </div>
     </section>
 
     <section id="booking" class="card">
@@ -103,23 +120,22 @@
             </div>
 
             <div class="form-group">
-                <label>Tanggal & Jam</label>
-                <div style="display:flex; gap:10px;">
-                    <input type="date" id="tanggal" required style="flex:1;">
-                    <select id="jam" required style="flex:1;">
-                        <option value="09:00">09:00</option>
-                        <option value="12:00">12:00</option>
-                        <option value="15:00">15:00</option>
-                        <option value="18:00">18:00</option>
-                    </select>
-                </div>
+                <label>Tanggal Kedatangan</label>
+                <input type="date" id="tanggal" required>
+            </div>
+
+            <div class="form-group">
+                <label>Pilih Jam</label>
+                <select id="jam" required disabled>
+                    <option value="">-- Pilih Tanggal Terlebih Dahulu --</option>
+                </select>
             </div>
 
             <div class="form-group">
                 <label>Layanan</label>
                 <select id="layanan">
                     <option value="Datang ke Toko">Datang ke Toko</option>
-                    <option value="Home Service">Home Service</option>
+                    <option value="Home Service ">Home Service</option>
                 </select>
             </div>
 
@@ -134,18 +150,61 @@
             <div id="boxExten" class="form-group" style="display:none;">
                 <label>Jenis Extension</label>
                 <select id="jenisExten">
+                    <option value="-">-- Pilih Jenis --</option>
                     <option value="Akrilik">Akrilik</option>
                     <option value="Gel/Hard Gel">Gel/Hard Gel</option>
-                    <option value="Soft Gel Tips">Soft Gel Tips</option>
+                    <option value="PolyGel">PolyGel</option>
+                    <option value="Soft Gel Tips">Soft Gel Tips/Gel-X</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Bentuk Kuku (Shape)</label>
+                <select id="shape">
+                    <option value="Squoval">Squoval</option>
+                    <option value="Almond">Almond</option>
+                    <option value="Oval">Oval</option>
+                    <option value="Square">Square</option>
+                    <option value="Coffin">Coffin</option>
                 </select>
             </div>
 
             <div class="form-group">
                 <label>Tipe Nail Art</label>
-                <select id="tipeArt">
+                <select id="tipeArt" onchange="handleTipeArt()">
+                    <option value="">-- Pilih Tipe --</option>
                     <option value="Design Toko">Design Toko (Katalog)</option>
+                    <option value="French Manicure">French Manicure</option>
+                    <option value="Nude Glossy">Nude Glossy</option>
+                    <option value="3D Art">3D Art</option>
+                    <option value="Cat Eye">Cat Eye</option>
                     <option value="Custom Sendiri">Custom Sendiri</option>
                 </select>
+            </div>
+            
+            <div id="boxNoDesain" class="form-group" style="display:none;">
+                <label>Pilih Nomor Desain (1-13)</label>
+                <select id="noDesain">
+                    <option value="-">-- Pilih Nomor --</option>
+                    <option value="1">Desain 1</option>
+                    <option value="2">Desain 2</option>
+                    <option value="3">Desain 3</option>
+                    <option value="4">Desain 4</option>
+                    <option value="5">Desain 5</option>
+                    <option value="6">Desain 6</option>
+                    <option value="7">Desain 7</option>
+                    <option value="8">Desain 8</option>
+                    <option value="9">Desain 9</option>
+                    <option value="10">Desain 10</option>
+                    <option value="11">Desain 11</option>
+                    <option value="12">Desain 12</option>
+                    <option value="13">Desain 13</option>
+                </select>
+            </div>
+
+            <div id="boxCustom" class="form-group" style="display:none;">
+                <label>Upload Referensi</label>
+                <input type="file" id="gambarCustom">
             </div>
 
             <div class="form-group">
@@ -153,54 +212,122 @@
                 <div class="checkbox-grid">
                     <div class="check-item"><input type="checkbox" name="extra" value="Manicure"> Manicure</div>
                     <div class="check-item"><input type="checkbox" name="extra" value="Remover"> Remover</div>
+                    <div class="check-item"><input type="checkbox" name="extra" value="Vitamin"> Vitamin</div>
                 </div>
             </div>
 
-            <button type="submit" id="submitBtn">CONFIRM BOOKING</button>
+            <button type="submit" id="submitBtn">KIRIM BOOKING SEKARANG</button>
         </form>
     </section>
 
     <section id="lokasi" class="card">
-        <h3>📍 Location</h3>
+        <h3>📍 Our Studio</h3>
         <p>Perumahan Alamanda Garden No. 103, Batam</p>
         <div style="border-radius:25px; overflow:hidden;">
-            <iframe src="https://www.google.com/maps/contrib/113979271529870570816/reviews" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.1!2d104.0!3d1.1!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMcKwMDYnMDAuMCJOIDEwNMKwMDAnMDAuMCJF!5e0!3m2!1sid!2sid!4v1" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
         </div>
     </section>
 </div>
 
 <script>
-    // LOGIKA TETAP SAMA (WA & SPREADSHEET)
-    const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbx1OdWr5s-w4vhkLXMcIcJIHuhFyoWSH0weR0a-IvhN2sO2SUdufsej5iu5oRHAlEZUzw/exec';
+    // --- LOGIKA LAMA (SPREADSHEET & WHATSAPP) ---
+    const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbx1OdWr5s-w4vhkLXMcIcJIHuhFyoWSH0weR0a-IvhN2sO2SUdufsej5iu5oRHAlEZUzw/exec'; 
+
+    const inputTanggal = document.getElementById('tanggal');
+    const selectJam = document.getElementById('jam');
+    const semuaJam = ["09:00", "10:00", "11:00", "12:00", "13:00", "14:00", "15:00", "16:00", "17:00", "18:00", "19:00", "20:00"];
+
+    // Set Min-Max Tanggal
+    const hariIni = new Date();
+    const tujuhHariLagi = new Date();
+    tujuhHariLagi.setDate(hariIni.getDate() + 7);
+    inputTanggal.setAttribute('min', hariIni.toISOString().split('T')[0]);
+    inputTanggal.setAttribute('max', tujuhHariLagi.toISOString().split('T')[0]);
+
+    // Cek Slot Kosong Otomatis
+    inputTanggal.addEventListener('change', function() {
+        const tgl = this.value;
+        if (!tgl) return;
+        selectJam.innerHTML = '<option>Mengecek ketersediaan...</option>';
+        selectJam.disabled = true;
+
+        fetch(`${SCRIPT_URL}?tanggal=${tgl}&v=${Math.random()}`)
+            .then(res => res.json())
+            .then(bookedSlots => {
+                let html = '<option value="">-- Pilih Jam --</option>';
+                semuaJam.forEach(j => {
+                    const isFull = bookedSlots.some(slot => slot.includes(j));
+                    html += `<option value="${j}" ${isFull ? 'disabled style="color:red;"' : ''}>${j} ${isFull ? '(FULL)' : ''}</option>`;
+                });
+                selectJam.innerHTML = html;
+                selectJam.disabled = false;
+            })
+            .catch(() => {
+                let html = '<option value="">-- Pilih Jam --</option>';
+                semuaJam.forEach(j => html += `<option value="${j}">${j}</option>`);
+                selectJam.innerHTML = html;
+                selectJam.disabled = false;
+            });
+    });
 
     document.getElementById('emmaForm').addEventListener('submit', function(e) {
         e.preventDefault();
         const btn = document.getElementById('submitBtn');
-        btn.innerText = "PROCESSING...";
-        
+        btn.innerText = "SEDANG MEMPROSES...";
+        btn.disabled = true;
+
         let extras = [];
         document.querySelectorAll('input[name="extra"]:checked').forEach(c => extras.push(c.value));
+        const formatWaktu = `${inputTanggal.value} Pukul ${selectJam.value}`;
 
         const payload = {
             nama: document.getElementById('nama').value,
-            waktu: document.getElementById('tanggal').value + " " + document.getElementById('jam').value,
+            jumlahOrang: document.getElementById('jumlahOrang').value,
+            waktu: formatWaktu, 
             layanan: document.getElementById('layanan').value,
             pakaiExten: document.getElementById('exten').value,
+            jenisExten: document.getElementById('jenisExten').value,
+            shape: document.getElementById('shape').value,
+            style: document.getElementById('tipeArt').value,
+            noDesain: document.getElementById('noDesain').value, 
             extras: extras.join(", ")
         };
 
-        // Kirim ke Spreadsheet
         fetch(SCRIPT_URL, { method: 'POST', mode: 'no-cors', body: JSON.stringify(payload) });
 
-        // Kirim ke WA
+        // Arahkan ke WhatsApp dengan format rapi
         setTimeout(() => {
-            const pesanWA = `Halo Emma's Nailist!%0A*BOOKING BARU*%0A👤 Nama: ${payload.nama}%0A📅 Waktu: ${payload.waktu}%0A📍 Layanan: ${payload.layanan}%0A✨ Tambahan: ${payload.extras}`;
+            const pesanWA = `Halo Emma's Nailist!%0A%0A` +
+                            `*DETAIL BOOKING BARU*%0A` +
+                            `--------------------------%0A` +
+                            `👤 *Nama:* ${payload.nama}%0A` +
+                            `👥 *Jumlah:* ${payload.jumlahOrang} Orang%0A` +
+                            `📅 *Waktu:* ${payload.waktu}%0A` +
+                            `📍 *Layanan:* ${payload.layanan}%0A` +
+                            `✨ *Style:* ${payload.style}%0A` +
+                            `${payload.noDesain !== "-" ? "🔢 *No. Desain:* "+payload.noDesain+"%0A" : ""}` +
+                            `💅 *Shape:* ${payload.shape}%0A` +
+                            `➕ *Extension:* ${payload.pakaiExten} (${payload.jenisExten})%0A` +
+                            `📝 *Tambahan:* ${payload.extras || "-"}%0A` +
+                            `--------------------------%0A` +
+                            `Mohon konfirmasinya ya, terima kasih! ✨`;
+
             window.location.href = `https://wa.me/6281918554431?text=${pesanWA}`;
-        }, 1000);
+            
+            alert("Booking berhasil! Mengalihkan ke WhatsApp...");
+            btn.innerText = "KIRIM BOOKING SEKARANG";
+            btn.disabled = false;
+            document.getElementById('emmaForm').reset();
+            resetTampilan();
+        }, 1500);w.location.href = `https://wa.me/6281918554431?text=${pesanWA}`;
+        }, 1500);
     });
 
-    function toggleExten() {
-        document.getElementById('boxExten').style.display = (document.getElementById('exten').value === 'Ya') ? 'block' : 'none';
+    function toggleExten() { document.getElementById('boxExten').style.display = (document.getElementById('exten').value === 'Ya') ? 'block' : 'none'; }
+    function handleTipeArt() {
+        const tipe = document.getElementById('tipeArt').value;
+        document.getElementById('boxNoDesain').style.display = (tipe === 'Design Toko') ? 'block' : 'none';
+        document.getElementById('boxCustom').style.display = (tipe === 'Custom Sendiri') ? 'block' : 'none';
     }
 </script>
 </body>
